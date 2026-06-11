@@ -3,3 +3,4 @@ dist/
 .playwright-cli/
 .mcpregistry_*
 .mcp_publisher_token
+config.json
