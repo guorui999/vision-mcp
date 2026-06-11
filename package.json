@@ -1,6 +1,6 @@
 {
   "name": "@guorui99/vision-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for image analysis - gives LLMs vision via external visual API",
   "type": "module",
   "main": "dist/index.js",

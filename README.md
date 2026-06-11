@@ -19,14 +19,15 @@
 ### 快速开始
 
 ```bash
-# 1. 安装依赖
+# 安装依赖（本地开发）
 npm install
-
-# 2. 构建
 npm run build
 
-# 3. 配置 MCP（在 Claude Desktop / claude.json 中添加）
+# 或直接通过 npx 运行（无需安装）
+npx -y @guorui99/vision-mcp
 ```
+
+**配置 MCP（在 Claude Desktop / claude.json 中添加）:**
 
 ```json
 {
@@ -44,19 +45,22 @@ npm run build
 启动后，通过 MCP 工具配置 API Key：
 
 ```
-vision_update_config api_key="sk-xxx"
+vision_update_config api_key="你的API Key"
 ```
 
-或直接编辑 `config.json`：
+或用环境变量（不写磁盘）：
 
-```json
-{
-  "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
-  "api_key": "你的API Key",
-  "model": "qwen3.5-omni-plus",
-  "language": "zh"
-}
 ```
+VISION_API_KEY=你的Key npx -y @guorui99/vision-mcp
+```
+
+支持的环境变量：
+| 变量 | 说明 | 默认值 |
+|------|------|--------|
+| `VISION_API_KEY` | API Key | — |
+| `VISION_BASE_URL` | API 地址 | `https://dashscope.aliyuncs.com/compatible-mode/v1` |
+| `VISION_MODEL` | 模型名 | `qwen3.5-omni-plus` |
+| `VISION_LANGUAGE` | 语言 | `zh` |
 
 ### 支持的视觉服务
 
