@@ -83,17 +83,17 @@ jpg, jpeg, png, gif, webp, bmp（单次最多 5 张，单文件最大 20MB）
 
 ```bash
 # 单张图片
-node scripts/vision.js photo.jpg "描述这张图片"
+node scripts/vision.cjs photo.jpg "描述这张图片"
 
 # 网络图片
-node scripts/vision.js --url https://example.com/img.png "这是什么？"
+node scripts/vision.cjs --url https://example.com/img.png "这是什么？"
 
 # 多张图片
-node scripts/vision.js img1.jpg img2.jpg "比较这两张图"
+node scripts/vision.cjs img1.jpg img2.jpg "比较这两张图"
 
 # 配置
-node scripts/vision.js --setup
-node scripts/vision.js --config
+node scripts/vision.cjs --setup
+node scripts/vision.cjs --config
 ```
 
 ---
@@ -102,10 +102,10 @@ node scripts/vision.js --config
 
 ```
 vision-mcp/
-├── src/                # MCP Server 源码 (TypeScript)
-├── dist/               # 编译产物
-├── scripts/vision.js   # CLI 工具 (legacy)
-├── config.json         # 共享配置文件
+├── src/                 # MCP Server 源码 (TypeScript)
+├── dist/                # 编译产物
+├── scripts/vision.cjs   # CLI 工具 (legacy)
+├── config.json          # 共享配置文件
 ├── package.json
 └── tsconfig.json
 ```

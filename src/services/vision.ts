@@ -109,7 +109,7 @@ async function callVisionAPI(
               }
               try {
                 const parsed = JSON.parse(data);
-                const text = parsed?.choices?.[0]?.message?.content || data;
+                const text = parsed?.choices?.[0]?.message?.content ?? data;
                 resolve(text);
               } catch {
                 resolve(data);

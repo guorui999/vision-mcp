@@ -4,6 +4,7 @@
   "description": "MCP server for image analysis - gives LLMs vision via external visual API",
   "type": "module",
   "main": "dist/index.js",
+  "mcpName": "io.github.guorui999/vision-mcp",
   "bin": {
     "vision-mcp": "./dist/index.js"
   },

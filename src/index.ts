@@ -13,7 +13,7 @@
 
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import { loadConfig, saveConfig, maskApiKey } from "./config.js";
+import { loadConfig, saveConfig, getConfigPath, maskApiKey } from "./config.js";
 import { validateImage, analyzeImages, type ImageInput } from "./services/vision.js";
 import {
   AnalyzeInputSchema,
@@ -143,6 +143,7 @@ No arguments required.`,
           `模型名称: ${config.model}`,
           `API Key: ${maskApiKey(config.api_key)}`,
           `语言: ${config.language === "en" ? "English" : "中文"}`,
+          `配置文件: ${getConfigPath()}`,
         ].join("\n"),
       }],
     };
