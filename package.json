@@ -1,18 +1,33 @@
 {
-  "name": "vision-mcp",
+  "name": "@guorui99/vision-mcp",
   "version": "1.0.0",
-  "description": "MCP server for vision analysis - gives LLMs image recognition via external visual API",
+  "description": "MCP server for image analysis - gives LLMs vision via external visual API",
   "type": "module",
   "main": "dist/index.js",
+  "bin": {
+    "vision-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "node dist/index.js",
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
+    "prepublishOnly": "npm run build",
     "clean": "rm -rf dist"
   },
   "engines": {
     "node": ">=18"
   },
+  "keywords": [
+    "mcp",
+    "vision",
+    "image-analysis",
+    "claude",
+    "model-context-protocol",
+    "ai"
+  ],
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.6.1",
     "zod": "^3.23.8"

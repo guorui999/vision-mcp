@@ -32,8 +32,8 @@ npm run build
 {
   "mcpServers": {
     "vision": {
-      "command": "node",
-      "args": ["/path/to/vision-mcp/dist/index.js"]
+      "command": "npx",
+      "args": ["-y", "@guorui99/vision-mcp"]
     }
   }
 }
